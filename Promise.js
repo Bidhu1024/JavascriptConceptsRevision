@@ -10,3 +10,12 @@ PromiseOne.then(()=>{
 }).catch((err)=>{
     console.error(err);
 })
+
+new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        console.log("promise 2 initiated")
+        resolve()
+    },2000)
+}).then(()=>{
+    console.log("promise 2 executed");
+})
