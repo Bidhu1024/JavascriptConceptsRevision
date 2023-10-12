@@ -19,3 +19,17 @@ new Promise((resolve,reject)=>{
 }).then(()=>{
     console.log("promise 2 executed");
 })
+
+
+// how to get values from resolve
+
+const PromiseThree = new Promise((resolve,reject)=>{
+    setTimeout(()=> {
+        resolve({name:"gudu", email:"bidhu1024av@gmail.com"})
+    },3000)
+})
+
+PromiseThree.then((user)=>{
+console.log(user)
+})
+
