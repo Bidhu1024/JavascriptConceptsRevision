@@ -50,3 +50,18 @@ PromiseFour.then((text)=>{
 }).catch((err)=>{
     console.log(err);
 })
+
+
+// fetching api using promise and async await
+
+async function getUsers(){
+try{
+let response = await fetch("https://jsonplaceholder.typicode.com/users")
+let data =  await response.json()
+console.log(data);
+}catch(err){
+console.log(err);
+}
+}
+
+getUsers()
