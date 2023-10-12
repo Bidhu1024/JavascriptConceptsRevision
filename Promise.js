@@ -33,3 +33,20 @@ PromiseThree.then((user)=>{
 console.log(user)
 })
 
+const PromiseFour = new Promise((resolve,reject)=>{
+    setTimeout(()=>{
+        let error = false
+        if(!error){
+            resolve("This is a resolved promise with value")
+        }else{
+            reject("this is an rejected promsie")
+        }
+    },4000)
+})
+
+PromiseFour.then((text)=>{
+    console.log(text)
+    console.log("resolved")     // this will not be printed because of the rejection in previous line
+}).catch((err)=>{
+    console.log(err);
+})
